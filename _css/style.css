@@ -1,0 +1,148 @@
+@charset"UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#e8e9eb;
+}
+
+/*Formatação do cabeçalho*/
+
+header#header{
+    display: inline-block;
+    position: relative;
+}
+header#header img{
+    width: 100%;
+}
+.title_logo{
+    position: absolute;
+    text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+    right: 20px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+header#header h1{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 35pt;
+	color: #e63946;
+    top: 145px;
+}
+header#header h2{
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20pt;
+	color: #e4b363;
+    top: 200px;
+}
+
+/* Formatação do Menu */
+
+nav#menu{
+	display: block;
+}
+nav#menu ul{
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -18px;
+	left: 0px;
+}
+nav#menu li{
+	display: inline-block;
+	background-color: rgba(224,223,213,0.6);
+	padding: 10px;
+	margin-top: 2px;
+    /*border: 1px solid #313638;*/
+}
+nav#menu li:hover{
+	background-color: rgba(49,54,56,0.6);
+}
+nav#menu li:hover a{
+    background-color: rgba(49,54,56,0.6);
+	color: #e0dfd5;
+    text-decoration: underline;
+}
+nav#menu h1{
+	display: none;
+}
+nav#menu a{
+	color: #000000;
+	text-decoration: none;
+}
+nav#menu a:hover{
+    background-color: rgba(0,0,0,0.8);
+    color: #ffffff;
+}
+
+/*Formatação do corpo*/
+div.content{
+    background-color: #e0dfd5;
+    padding: 30px;
+}
+
+
+div.schedule{
+    padding: 20px;
+}
+
+
+section.current-movie{
+    vertical-align:top;
+    display: inline-block;
+    width: 35%;
+}
+
+
+section.current-movie h3{
+    text-align: center;
+    color: #772e25;
+}
+
+section.current-movie ul{
+    list-style: none;
+}
+
+section.current-movie li{
+    font-family: 'Open Sans', sans-serif;
+    padding: 3px;
+    margin: 2px;
+    background-color: #e0dfd5;
+    color: #313638;
+}
+ li#movie-title{
+    font-family: 'Open Sans', sans-serif;
+}
+
+section.current-movie li#movie-title:before{
+    content:"Título: ";
+}
+section.current-movie li#director:before{
+    content:"Diretor: ";
+}
+section.current-movie li#duration:before{
+    content:"Duração: ";
+}
+section.current-movie li#language:before{
+    content:"Idioma: ";
+}
+
+article.synopsis h4{
+    text-align: center;
+    margin-left: 10%;
+    color: #313638;
+}
+
+article.synopsis p{
+    text-align: justify;
+    margin-left: 10%;
+    color: #313638;
+}
+img.movie-image{
+    width: 50%;
+    margin-left: 10%;
+}
+
