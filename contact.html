@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title>Cineclube Vertov</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="_css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="logo"><img src="_images/vertov_logo.svg" alt="Logo do Cineclube Vertov"></a>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">sobre</a></li>
+                    <li><a href="#">programação</a></li>
+                    <li><a href="#">contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="content-contact">
+            <form>
+                <label for="input-name">Nome</label>
+                <input type="text" id="input-name" class="standard-input" required>
+
+                <label for="input-email">Email</label>
+                <input type="email" id="input-email" class="standard-input" required placeholder="email@domain.com">
+
+                <label for="input-telephone">Telefone</label>
+                <input type="tel" id="input-telephone" class="standard-input" required placeholder="(XX) XXXXX-XXXX">
+
+                <label for="message">Mensagem</label>
+                <textarea rows="10" id="message" class="standard-input" required></textarea>
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+                    <label for="radio-email" class="radio"><input type="radio" id="radio-email" name="contact"
+                            value="email">Email</label>
+
+                    <label for="radio-telephone"><input type="radio" id="radio-telephone" name="contact"
+                            value="telephone">Telefone</label>
+
+                    <label for="radio-whatsapp"><input type="radio" id="radio-whatsapp" name="contact"
+                            value="whatsapp">WhatsApp</label>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Qual dia da semana você participa das sessões do cineclube?</legend>
+                    <select>
+                        <option>Sexta</option>
+                        <option>Sabado</option>
+                        <option>Domingo</option>
+                    </select>
+                </fieldset>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Gostaria de receber novidades por email
+                </label>
+                <input type="submit" value="Enviar formulário" class="submit-btn">
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>18h</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>18h</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td>18h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <aside class="aside">
+            <div class="month-director">
+                <h3>Diretor do mês</h3>
+                <img src="_images/godard.jpg" alt="Foto do Jean-Luc Godard">
+                <p>Jean-Luc Godard é um cineasta, roteirista e crítico de cinema franco-suíço. Ele ganhou destaque
+                    como
+                    um pioneiro do movimento Nouvelle Vague Francesa da década de 1960 e foi indiscutivelmente o
+                    cineasta francês mais influente da era pós-guerra.</p>
+                <ul>
+                    <li>Alphavile (1965)</li>
+                    <li>Masculino-Femino (1966)</li>
+                    <li><em>A Chinesa(1967)</em></li>
+                    <li>Alphavile (1965)</li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <footer class="footer">
+            <p>Leonardo Paixão © 2021. Alguns direitos reservados.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

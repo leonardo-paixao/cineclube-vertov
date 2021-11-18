@@ -1,124 +1,258 @@
 @charset"UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto');
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
-
+body, p, h1, ul, li, blockquote {
+    padding: 0px;
+    margin: 0px
+}
 body {
-    font-family: Arial, sans-serif;
-    background-color:#e8e9eb;
+    font-family: 'Vollkorn', Georgia, serif;
+    background-color: #dcdcdd;
+}
+.container {
+    display: grid;
+    grid-template-columns: 3fr minmax(160px, 1fr);
+    grid-gap: 5px;
+    grid-template-areas: "h h"
+                         "m a"
+                         "f f";
 }
 
-/*Formatação do cabeçalho*/
+/*HEADER*/
 
-header#header{
-    display: inline-block;
-    position: relative;
+header{
+    grid-area: h;
+    background: linear-gradient(135deg, #780000, #c1121f);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 0px 30px 0px 20px;
 }
-/* Formatação do Menu */
-
-nav#menu{
-	display: block;
+.logo {
+    max-width: 200px;
 }
-nav#menu ul{
-	list-style: none;
-	text-transform: uppercase;
-	position: absolute;
-	top: -18px;
-	left: 0px;
+.header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+	text-transform: lowercase;
 }
-nav#menu li{
-	display: inline-block;
-	background-color: rgba(224,223,213,0.6);
-	padding: 10px;
-	margin-top: 2px;
-    /*border: 1px solid #313638;*/
+.header li + li {
+    margin-left: 15px;
 }
-nav#menu li:hover{
-	background-color: rgba(49,54,56,0.6);
+.header nav a {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 1.123em;
+    background: rgba(0,0,0,.1);
+    border-radius: 5px;
+    transition: 0.5s;
 }
-nav#menu li:hover a{
-    background-color: rgba(49,54,56,0.6);
-	color: #e0dfd5;
-    text-decoration: underline;
-}
-nav#menu h1{
-	display: none;
-}
-nav#menu a{
-	color: #000000;
-	text-decoration: none;
-}
-nav#menu a:hover{
-    background-color: rgba(0,0,0,0.8);
-    color: #ffffff;
+.header nav a:hover {
+    background: rgba(0,0,0,.5);
 }
 
-/*Formatação do corpo*/
-div.content{
-    background-color: #e0dfd5;
+/*CONTENT*/
+
+.content {
+    background-color: #dcdcdd;
+    grid-area: m;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+/*TITLE*/
+
+.title {
+    color: #c1121f;
+    grid-column: 1 / -1;
+ }
+
+.title h1 {
+    font-size: 3.75em;
+    line-height: 1;
+    font-weight: 700;
+}
+.title span {
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+/*Estilos Content*/
+
+p {
+    margin: 30px 10px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0,0,0,.7);
+}
+.quotes {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    background: linear-gradient(135deg, #780000, #772e25);
+}
+.quotes p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.current-movie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h3 h3"
+                         "md mi";
+    grid-gap: 10px;
+}
+.current-movie h3 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-size: 1.5em;
+    color: #003049;
+}
+.movie-details {
+    grid-area: md;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
     padding: 30px;
 }
-
-
-div.schedule{
-    padding: 20px;
-}
-
-
-section.current-movie{
-    vertical-align:top;
-    display: inline-block;
-    width: 35%;
-}
-
-
-section.current-movie h3{
-    text-align: center;
-    color: #772e25;
-
-}
-
-section.current-movie ul{
+.movie-details li {
+    color: #46494c;
+    font-family: Courier, monospace;
+    font-size: 1.125em;
+    padding: 10px;
     list-style: none;
 }
-
-section.current-movie li{
-    font-family: 'Open Sans', sans-serif;
-    padding: 3px;
-    margin: 2px;
-    background-color: #e0dfd5;
-    color: #313638;
-}
- li#movie-title{
-    font-family: 'Open Sans', sans-serif;
-}
-
-section.current-movie li#movie-title:before{
+.current-movie li#movie-title:before{
     content:"Título: ";
+    font-weight: bold;
 }
-section.current-movie li#director:before{
+.current-movie li#director:before{
     content:"Diretor: ";
+    font-weight: bold;
 }
-section.current-movie li#duration:before{
-    content:"Duração: ";
+.current-movie li#genre:before{
+    content:"Gênero: ";
+    font-weight: bold;
 }
-section.current-movie li#language:before{
-    content:"Idioma: ";
-}
-
-article.synopsis h4{
-    text-align: center;
-    margin-left: 10%;
-    color: #313638;
-}
-
-article.synopsis p{
-    text-align: justify;
-    margin-left: 10%;
-    color: #313638;
+.current-movie li#synopsis:before{
+    content:"Sinopse: ";
+    font-weight: bold;
 }
 img.movie-image{
-    width: 50%;
-    margin-left: 10%;
+    width: 100%;
+    border-radius: 5px;
+    grid-area: mi;
+    align-self: center;
 }
 
+/*ASIDE*/
+
+.aside {
+    background-color: #003049;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    display: block;
+    
+}
+
+.mouth-diretor {
+    position: relative;
+    vertical-align: center;
+}
+.aside h3 {
+    color: white;
+    text-align: center;
+}
+.aside img {
+    border-radius: 10px;
+    width: 70%;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    display: block;
+    margin: auto;
+}
+.aside p {
+    color: white;
+    font-size: 1em;
+    width: 75%;
+    margin: 25px auto;
+    text-align: justify;
+    
+}
+.aside ul {
+    width: 60%;
+    margin: auto;
+}
+
+/*FOOTER*/
+
+.footer{
+    background: linear-gradient(135deg, #46494c, #4c5c68);
+    grid-area: f;
+}
+.footer p{
+    color: white;
+    text-align: center;
+}
+
+/*FORMS*/
+.content-contact {
+    width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 40px;
+}
+
+form label, form legend {
+    display:block;
+    font-size: 20px;
+    color: rgba(0,0,0,.7);
+    margin: 0 0 10px;
+}
+.standard-input {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 70%;
+}
+.checkbox {
+    margin: 20px 0;
+}
+.submit-btn {
+    width: 40%;
+    padding: 15px 0;
+    background: #002f49d7;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 1s;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background: #003049;
+    transform: scale(1.05);
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background-color: #003049;
+    color: white;
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid #4c5c68;
+    padding: 8px 15px;
+}
